@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dla Ciebie ❤️</title>
+<style>
+    body { 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh; 
+        background-color: #ffe5ec; 
+        font-family: Arial, sans-serif; 
+        text-align: center; 
+        padding: 20px;
+    }
+    .message {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+</style>
+</head>
+<body>
+
+<div class="message">
+    <h1 id="text"></h1>
+</div>
+
+<script>
+    const messages = [
+        "Kocham Cię bardziej niż czekoladę! 🍫❤️",
+        "Jesteś moim słoneczkiem nawet w pochmurne dni ☀️",
+        "Nie mogę się doczekać, żeby Cię zobaczyć 🥰",
+        "Każdy dzień z Tobą to przygoda! 🌟",
+        "Jesteś moim serduszkiem ❤️",
+        "Twoje uśmiechy są moim szczęściem 😊"
+    ];
+
+    const date = new Date();
+    const dayIndex = date.getDate() % messages.length;
+    document.getElementById("text").innerText = messages[dayIndex];
+</script>
+
+</body>
+</html>
